@@ -1,0 +1,188 @@
+
+
+@keyframes bgAnimation {
+    from { background-color: #658185; }
+    to { background-color: #839fa3; }
+}
+
+@keyframes buttonAnimation {
+    from {color: lightblue;}
+    to {color: black;}
+}
+
+
+@keyframes paragraphsAnimation {
+    from {color: #576F72;}
+    to {color: black;}
+}
+
+
+@keyframes imagesAnimation {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+
+
+body {
+    margin: 0;
+    background-color: #658185;
+    text-align: center;
+    animation-name: bgAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+h1 {
+    display: block;
+    text-align: center;
+    background-color: #576F72;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 20px;
+    animation-name: paragraphsAnimation;
+    animation-duration: 2s;
+
+}
+
+#result_label {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #576F72;
+    padding: 20px;
+    border-radius: 5px;
+    animation-name: paragraphsAnimation;
+    animation-duration: 2s;
+
+}
+
+
+p {
+    background-color: #576F72;
+
+    margin-left:  auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+
+    animation-name: paragraphsAnimation;
+    animation-duration: 2s;
+
+}
+
+
+#reaction_button {
+    background-color: lightblue;
+
+    width: 80%;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: large;
+
+    display: block;
+
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+
+
+    animation-name: buttonAnimation;
+    animation-duration: 2s;
+
+
+}
+
+
+
+
+.infoContainer {
+    background-color: #627a7e;
+    display: inline-table;
+
+    table-layout: fixed;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-spacing: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.infoBoxParagraph {
+    background-color: #576F72;
+    display: table-cell;
+    height: auto;
+    width: 300px;
+    float: right;
+
+    animation-name: paragraphsAnimation;
+    animation-duration: 2s;
+
+}
+
+.infoBoxImage {
+    height: 250px;
+    width: 300px;
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+    animation-name: imagesAnimation;
+    animation-duration: 2s;
+}
+
+
+
+@media (max-width:760px) {
+    .infoContainer {
+        background-color: #627a7e;
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+        table-layout: fixed;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .infoBoxParagraph {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .infoBoxImage {
+        display: inline-block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: top;
+    }
+}
+
+
+@media (min-width:1400px) {
+    .infoContainer {
+        background-color: #627a7e;
+        display: inline-table;
+        vertical-align: top;
+
+        table-layout: fixed;
+        margin-left: auto;
+        margin-right: 20px;
+
+    }
+}
